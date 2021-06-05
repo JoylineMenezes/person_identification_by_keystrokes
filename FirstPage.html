@@ -8,6 +8,9 @@
           function buttonclick(){
             window.location="speedCheck.html"
           }
+          function loginclick(){
+            window.location = "loginPage.html";
+          }
     </script>
   </head>
   <body>
@@ -18,7 +21,7 @@
           <!-- two buttons for students and teacher.
             teacher button need not work -->
         <div class="btn-1">
-          <input type="button" name="teacher_signup" class = "signup_button" value="Teacher Signup" disabled>
+          <input type="button" name="teacher_signup" class = "signup_button" value="Student Login" onclick="loginclick()">
           <input type="button" name="student_signup" class = "signup_button" value="Student Signup" onclick="buttonclick()">
         </div>
 
