@@ -9,7 +9,7 @@ var buttonStart = document.getElementById('start1');
 var buttonStop = document.getElementById('stop1');
 var buttonReset = document.getElementById('reset1');
 var interval; //to store interval of time
-
+var read = " ";
 //function to start a timer with start button
 function startTimer(){
   tens++;
@@ -43,6 +43,8 @@ buttonStart.onclick = function(){
   interval = setInterval(startTimer);
 };
 buttonStop.onclick = function () {
+  read = minutes + ":" + seconds + ":" + tens;
+  console.log(read);
   clearInterval(interval);
   buttonStart.removeAttribute('disabled');
 }
@@ -65,6 +67,7 @@ const originalText = document.querySelector(".original_text1 p").innerHTML;
 const resetButton = document.querySelector("#reset2");
 const theTimer = document.querySelector(".timer2");
 
+var typing1_time = " ";
 var timer = [0,0,0,0];
 var interval1;
 var timerRunning = false;
@@ -94,6 +97,9 @@ function spellCheck() {
     let originTextMatch = originalText.substring(0,textEntered.length);
 
     if (textEntered == originalText) {
+      typing1_time = theTimer.innerHTML;
+      // console.log("HAHAHAHAHAHAHAHAHAHA");
+      console.log(typing1_time);
         clearInterval(interval1);
         testWrapper.style.borderColor = "#429890";
     } else {
@@ -143,6 +149,7 @@ const originalText1 = document.querySelector(".original_text2 p").innerHTML;
 const resetButton1 = document.querySelector("#reset3");
 const theTimer1 = document.querySelector(".timer3");
 
+var typing2_time = " ";
 var timer1 = [0,0,0,0];
 var interval2;
 var timerRunning1 = false;
@@ -172,10 +179,13 @@ function spellCheck1() {
     let originTextMatch1 = originalText1.substring(0,textEntered1.length);
 
     if (textEntered1 == originalText1) {
+      typing2_time = theTimer1.innerHTML;
+      // console.log("HAHAHAHAHAHAHAHAHAHA");
+      console.log(typing2_time);
         clearInterval(interval2);
         testWrapper1.style.borderColor = "#429890";
     } else {
-        if (textEntered1 == originalTextMatch1) {
+        if (textEntered1 == originTextMatch1) {
             testWrapper1.style.borderColor = "#65CCf3";
         } else {
             testWrapper1.style.borderColor = "#E95D0F";
@@ -217,6 +227,7 @@ resetButton1.addEventListener("click", reset1, false);
 //taking value from the signup_form
 var form0 = document.querySelector(".signup_form");
 var submit0 = document.querySelector("#submit");
+var error = document.querySelector("#error_message")
 var email;
 var password0;
 var conpassword;
@@ -228,11 +239,17 @@ form0.addEventListener('submit', function(event){
   conpassword = document.getElementById("confirm_password").value;
 
   if(password0 != conpassword){
-    alert("Passwords do not match");
+    // alert("Passwords do not match");
+    error.innerHTML = " Passwords do not match each other!";
+    error.style.color = "#b71c1c";
     // password0.style.borderColor = "red";
     // conpassword.style.borderColor = "red";
     // password0.value = "";
     // conpassword.value = "";
+  }
+  else{
+    error.innerHTML = "Successfully Submitted!!"
+      error.style.color = "#00e676";
   }
   console.log(email);
   console.log(password0);
@@ -316,6 +333,7 @@ const originalWord1 = "environment";
 const wordResetButton1 = document.querySelector("#reset4");
 const wordTheTimer1 = document.querySelector(".timer4");
 
+var word1_time =" ";
 var w_timer1 = [0, 0, 0, 0];
 var w_interval1;
 var w_timerRunning1 = false;
@@ -338,7 +356,11 @@ function w_spellCheck1() {
     console.log(w_textEntered1);
     console.log("hello");
     if (w_textEntered1 == originalWord1) {
+        word1_time = wordTheTimer1.innerHTML;
+        // console.log("HAHAHAHAHAHAHAHAHAHA");
+        console.log(wordTheTimer1.innerHTML);
         clearInterval(w_interval1);
+          console.log(word1_time);
         // testWrapper.style.borderColor = "#429890";
     // } else {
     //     if (textEntered == originTextMatch) {
@@ -383,6 +405,7 @@ const originalWord2 = "misfortunate";
 const wordResetButton2 = document.querySelector("#reset5");
 const wordTheTimer2 = document.querySelector(".timer5");
 
+var word2_time = " ";
 var w_timer2 = [0, 0, 0, 0];
 var w_interval2;
 var w_timerRunning2 = false;
@@ -405,6 +428,8 @@ function w_spellCheck2() {
     console.log(w_textEntered2);
     // console.log("hello");
     if (w_textEntered2 == originalWord2) {
+        word2_time = wordTheTimer2.innerHTML;
+        console.log(word2_time);
         clearInterval(w_interval2);
         // testWrapper.style.borderColor = "#429890";
     // } else {
@@ -451,6 +476,7 @@ const originalWord3 = "delightful";
 const wordResetButton3 = document.querySelector("#reset6");
 const wordTheTimer3 = document.querySelector(".timer6");
 
+var word3_time = " ";
 var w_timer3 = [0, 0, 0, 0];
 var w_interval3;
 var w_timerRunning3 = false;
@@ -473,6 +499,8 @@ function w_spellCheck3() {
     console.log(w_textEntered3);
     // console.log("hello");
     if (w_textEntered3 == originalWord3) {
+        word3_time = wordTheTimer3.innerHTML
+        console.log(word3_time);
         clearInterval(w_interval3);
         // testWrapper.style.borderColor = "#429890";
     // } else {
@@ -511,7 +539,26 @@ testWord3.addEventListener("keypress", w_start3, false);
 testWord3.addEventListener("keyup", w_spellCheck3, false);
 wordResetButton3.addEventListener("click", w_reset3, false);
 
+console.log("ALL VALUES TO BE RECORDED:");
+console.log(email);
+console.log(password0);
+console.log("word1 time: " + word1_time);
+console.log("word2 time: " + word2_time);
+console.log("word3 time: " + word2_time);
+console.log("read the passage time: "+ read);
+console.log("write passage1 time: "+ typing1_time);
+console.log("write passage2 time: "+typing2_time);
 
+//submit all - the final submit
+document.getElementById("final_submit").onclick = function(){
+  // alert("submitted!")
+  location.href = "FirstPage.html";
+};
 
+//cancel all
+document. getElementById("cancel_all").onclick = function(){
+alert("Successfully submitted! Your data has been recorded ")
+  location.href = "FirstPage.html";
+};
 
 //
