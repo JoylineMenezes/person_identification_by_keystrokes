@@ -137,6 +137,7 @@ float:left;
 
 #login_test-area1, #login_test-area2{
   margin-left: 20px;
+  text-align:left;
 }
 
 .login_test-area1, .login_test-area2{
