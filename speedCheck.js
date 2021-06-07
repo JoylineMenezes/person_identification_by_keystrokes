@@ -556,12 +556,12 @@ document.getElementById("final_submit").onclick = function(){
   // setting all the variable values need to be compared in local storage
   localStorage.setItem("localEmail", email);
   localStorage.setItem("localPassword", password0);
+  alert("Successfully submitted! Your data has been recorded ");
   location.href = "FirstPage.html";
 };
 
 //cancel all
 document. getElementById("cancel_all").onclick = function(){
-alert("Successfully submitted! Your data has been recorded ")
   location.href = "FirstPage.html";
 };
 

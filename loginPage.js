@@ -189,6 +189,21 @@ testArea2.addEventListener("keyup", spellCheck2, false);
 resetButton2.addEventListener("click", reset2, false);
 
 
+//*******Final submit and cancel************
+
+//submit all - the final submit
+document.getElementById("login_final_submit").onclick = function(){
+  // alert("submitted!")
+  //change to identify page
+alert("Successfully submitted! Your data has been recorded ");
+  location.href = "identification_login.html";
+};
+
+//cancel all
+document. getElementById("login_cancel_all").onclick = function(){
+  location.href = "FirstPage.html";
+};
+
 
 
 
