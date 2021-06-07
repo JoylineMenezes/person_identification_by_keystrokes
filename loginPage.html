@@ -4,6 +4,7 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" >
         <title>Person Identification -  Login!</title>
           <link rel="stylesheet" href="loginPage.css">
+          <script src="loginPage.js" async></script>
 </head>
 <body>
         <!-- heading -->
@@ -15,9 +16,9 @@
         <form class="login_form" action="#" method="post">
                   <h3>Login form</h3>
                   <label for="login_email" class = "label-text">E-mail id:<br><input type="email" name="login_email" id="login_email" value="" required></label>
-                  <label for="login_password" class="label-text">Enter Password:<br><input type="password" name="login_password" id="log_password" value="" required></label>
+                  <label for="login_password" class="label-text">Enter Password:<br><input type="password" name="login_password" id="login_password" value="" required></label>
                   <div class="label-text">
-                          <input type="submit" name="submit" value="Submit">
+                          <input type="submit" name="submit" value="Submit" id="log_submit">
                           <input type="reset" name="reset" value="Clear">
                 </div>
                 <p id="login_error_message"></p>
