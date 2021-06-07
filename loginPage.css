@@ -148,32 +148,6 @@ text-align: left;
   font-size: 80px;
   margin:40px 0;
 }
-/* .login_original_text2,.login_test-area1, .login_test-area2 */
-/* .login_timings1 {
-  width: 200px;
-  float: left;
-  margin-left: 300px;
-  border-style: solid;
-  border-color: black;
-} */
-
-
-/*
-#login_start1, #login_stop1, #login_reset1{
-font-size: 35px;
-height:60px;
-width: 290px;
-margin:15px;
-border-style: solid;
-border-radius: 4px;
-border-width: thick;
-border-color:#004d40;
-}
-
-  /* #login_clock1, #login_clock2{
-    font-size: 80px;
-    margin:40px 240px;
-  } */
 
 #login_reset1, #login_reset2{
   font-size: 35px;

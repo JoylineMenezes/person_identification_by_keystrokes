@@ -5,7 +5,7 @@ var minutes = 00;
 var appendTens = document.getElementById('tens');
 var appendSeconds = document.getElementById('seconds');
 var appendMinutes = document.getElementById('minutes');
-var buttonStart = document.getElementById('start1');
+var buttonStart = document.querySelector("#start1");
 var buttonStop = document.getElementById('stop1');
 var buttonReset = document.getElementById('reset1');
 var interval; //to store interval of time
@@ -549,9 +549,13 @@ console.log("read the passage time: "+ read);
 console.log("write passage1 time: "+ typing1_time);
 console.log("write passage2 time: "+typing2_time);
 
+
 //submit all - the final submit
 document.getElementById("final_submit").onclick = function(){
   // alert("submitted!")
+  // setting all the variable values need to be compared in local storage
+  localStorage.setItem("localEmail", email);
+  localStorage.setItem("localPassword", password0);
   location.href = "FirstPage.html";
 };
 
@@ -560,5 +564,15 @@ document. getElementById("cancel_all").onclick = function(){
 alert("Successfully submitted! Your data has been recorded ")
   location.href = "FirstPage.html";
 };
+
+// ---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 //
