@@ -149,10 +149,9 @@
           </div>
 
           <div class="test-wrapper1">
-              <textarea id="test-area1" name="textarea" rows="7" cols="66" placeholder="The clock starts when you start typing."></textarea>
+              <textarea id="test-area1"  onkeyup="javascript:keypress('one')" name="textarea" rows="7" cols="66" placeholder="The clock starts when you start typing."></textarea>
           </div><!-- .test-wrapper -->
         </div>
-      </section>
 
           <hr>
 
@@ -175,7 +174,7 @@
           </div>
 
           <div class="test-wrapper2">
-              <textarea id="test-area2" name="textarea" rows="9" cols="66" placeholder="The clock starts when you start typing."></textarea>
+              <textarea id="test-area2" onkeyup="javascript:keypress('two')" name="textarea" rows="9" cols="66" placeholder="The clock starts when you start typing."></textarea>
           </div><!-- .test-wrapper -->
         </div>
         </section>
@@ -193,5 +192,44 @@
           </div>
         </div>
         <hr><hr>
+
+      </section>
+      <script type="text/javascript">
+        var diff = new Array(7);
+        var i=new Array(7),d,x=0,curr=0;
+        for (var k = 0; k < 7; k++) {
+        diff[k] = new Array(100);
+            //s[k]=new Array(100);
+            i[k]=0;
+        }
+    
+      function keypress (d) 
+      {
+        //var x=document.getElementById(d);
+        var evt = event || e; // for trans-browser compatibility
+            var charCode = evt.which || evt.keyCode;
+        d=new Date();
+        curr=d.getTime();
+        if(charCode==8)
+        {
+            var n=0;
+    
+        }
+        else if(charCode!=9)
+        {
+          x+=" "+curr;
+            console.log(x);
+            var xmlhttp = new XMLHttpRequest();
+                /*xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("demo").innerHTML = xmlhttp.responseText;
+                    }
+                };*/
+                xmlhttp.open("GET", "print.php?r=" + curr, true);
+                xmlhttp.send();
+        }   
+      }
+    </script>
+
   </body>
 </html>
