@@ -139,6 +139,9 @@ float:left;
   margin-left: 20px;
   text-align:left;
 }
+.login_passage1,.login_passage2{
+  height: 120px;
+}
 
 .login_test-area1, .login_test-area2{
 margin-left: 80px;
