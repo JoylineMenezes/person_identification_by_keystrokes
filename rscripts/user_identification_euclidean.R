@@ -36,7 +36,7 @@ while(1)
 }
 avg_pwd_timing=total_timing/num_pwd_stored
 
-  
+
 #Euclidean distances
 anomaly=array(0,num_pwd_stored)
 for(i in 1:num_pwd_stored)
@@ -77,9 +77,9 @@ for(i in 1:pwd_len)
   euclidean_dist=euclidean_dist+(arr[i]-avg_pwd_timing[i])^2
 }
 euclidean_dist=sqrt(euclidean_dist)
-cat("Threshold : ",threshold,"   Euc dist :  ",euclidean_dist)
+cat("Threshold : ",(threshold+30),"   Euc dist :  ",euclidean_dist)
 #print(flag)
-if(euclidean_dist<=threshold)
+if(euclidean_dist<=(threshold+30))
 {
   print("yes")
 } else

@@ -51,10 +51,13 @@ if ($exists > 0) //IF there are no returning rows or no existing username
             $_SESSION['strm'] = $res4;
             $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
 
+            //print '<script>
+    //window.location.assign("profile.php");</script>';
         } else {
             $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
-            print '<script>
-    window.location.assign("profile");</script>';
+            Print '<script>
+							alert("Enter keystoke information for secure access!");
+							window.location.assign("speedCheck.php");</script>';
 
         }
 

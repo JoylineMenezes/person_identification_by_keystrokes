@@ -14,7 +14,7 @@
 <body>
 <!-- heading -->
 <h2>SignUp Process</h2>
-<p id="instructions">Please fill all the fields as per the instructions. It will play an important role in identifying you in the future!</p>
+<p id="instructions">Please fill the below fields to register </p>
 
 <hr>
 

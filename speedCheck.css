@@ -104,7 +104,7 @@ span{
   font-size: 20px;
 }
 
-.passage1, .original_text1, .original_text2, #test-area1, #test-area2,#test-area3,#test-area4{
+.passage1, .original_text1, .original_text2 {
 color:#004d40;
 text-align:center;
 font-size: 20px;
@@ -113,9 +113,26 @@ border-width: thick;
 border-color: #004d40;
 background-color: white;
 width:540px;
-float:left;
-}
+    margin: auto;
 
+}
+#test-area1, #test-area2,#test-area3,#test-area4 {
+    color:#004d40;
+    text-align:center;
+    font-size: 20px;
+    border-style: solid;
+    border-width: thick;
+    border-color: #004d40;
+    background-color: white;
+    width:540px;
+    height:50px ;
+    margin: auto;
+
+}
+.test-wrapper1{
+    text-align: center;
+    margin: auto;
+}
 .timings {
   width: 200px;
   float: left;
@@ -150,7 +167,7 @@ display: inline-block;
 #seconds, #tens, #minutes{
   color: black;
 }
-.read_and_type_the_passage1, .read_and_type_the_passage2{
+.read_and_type_the_passage1, .read_and_type_the_passage2,.read_and_type_the_passage3,.read_and_type_the_passage4{
   padding:30px;
   margin:20px;
   padding-bottom: 50px;
@@ -164,11 +181,24 @@ display: inline-block;
    color:#37474f;
  }
  .read_and_type_the_passage2{
-   background-color:#4dd0e1;
+   background-color:#26c6da;
  }
  .read_and_type_the_passage2 h3{
    color:#37474f;
  }
+
+.read_and_type_the_passage3{
+    background-color:#26c6da;
+}
+.read_and_type_the_passage3 h3{
+    color:#37474f;
+}
+.read_and_type_the_passage4{
+    background-color:#26c6da;
+}
+.read_and_type_the_passage4 h3{
+    color:#37474f;
+}
 
  #clock2, #clock3, #clock4, #clock5, #clock6,#clock7,#clock8{
    font-size: 80px;

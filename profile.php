@@ -42,9 +42,19 @@ if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])
         Print "The input has passed ".$count." out of three predictive algorithms";
         //if(strpos($res, "yes")!==false ||( strpos($resn, "yes")!==false &&strpos($resm, "yes")!==false))
         if ($count>=1)
-            Print "<br>It has passed the ensemble criteria!!Yippe!!";
+        {
+            //Print "<br>It has passed the ensemble criteria!!Yippe!!";
+            Print '<script>	window.location.assign("identification_login.php");</script>';
+        }
+
         else
-            Print "<br>It has failed the ensemble criteria! Sorry";
+        {
+            Print '<script>alert("It has failed the ensemble criteria! Sorry")</script>';
+            Print '<script>	window.location.assign("loginForm.php");</script>';
+
+
+        }
+
     }
     else{
         Print "Enter your keystroke";

@@ -21,63 +21,41 @@ else{
 $user = $_SESSION['user']; //assigns user value
 ?>
 <body>
-<form  action="validate.php" method="post" enctype="multipart/form-data>
+<form  action="validate.php" method="post" enctype="multipart/form-data">
 <!-- heading -->
-<h2>SignUp Process</h2>
-<p id="instructions">Please fill all the fields as per the instructions. It will play an important role in identifying you in the future!</p>
+<h2>Keystroke Entry </h2>
+<p id="instructions">Please fill all the fields . It will play an important role in identifying you in the future!</p>
 
 <hr>
 
 <hr>
 
     <script>console.log("inside form")</script>
-    <!-- password typing speed1 -->
+
 <!-- read and type the passage1 -->
 <div class="read_and_type_the_passage1">
-    <!--h3>Read and Type the Passage 1</h3>
-    <p class="t1">This is a typing test. This test is performed to calculate your typing speed. </p>
-    <p class="t1">Instructions:<br>Your goal is to duplicate the provided text, <span>EXACTLY</span>, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p-->
     <section class = "test-area1">
-        <div class="timings2">
-            <!--timer starts from here -->
-            <section id="clock2" class="label-text">
-                <div class="timer2">00:00:00</div>
-            </section>
-            <button id="reset2" class="label-text">RESET</button>
-        </div>
-
-        <div class="original_text1">
+        <!--div class="original_text1">
             <p class="passage2">Enter your password</p>
-        </div>
+        </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area1"  onkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="The clock starts when you start typing."></textarea>
+            <textarea id="test-area1"  onkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
-</div>
+    </section></div>
 
 <hr>
 
 
 <!-- read and type the passage2 -->
 <div class="read_and_type_the_passage2">
-    <!--h3>Read and Type the Passage 2</h3>
-    <p class="t1">This is a typing test. This test is performed to calculate your typing speed. </p>
-    <p class="t1">Instructions:<br>Your goal is to duplicate the provided text, <span>EXACTLY</span>, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p-->
     <section class="test-area2">
-        <div class="timings3">
-            <!--timer starts from here -->
-            <section id="clock3" class="label-text">
-                <div class="timer3">00:00:00</div>
-            </section>
-            <button id="reset3" class="label-text">RESET</button>
-        </div>
-
-        <div class="original_text2">
+        <!--div class="original_text2">
             <p class="passage3">Enter your password</p>
-        </div>
+        </div-->
 
-        <div class="test-wrapper2">
-            <textarea id="test-area2" onkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="The clock starts when you start typing."></textarea>
+        <div class="test-wrapper1">
+            <textarea id="test-area2" onkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
 
     </section></div>
@@ -85,58 +63,59 @@ $user = $_SESSION['user']; //assigns user value
 <hr>
 
 <div class="read_and_type_the_passage3">
-    <!--h3>Read and Type the Passage 3</h3>
-    <p class="t1">This is a typing test. This test is performed to calculate your typing speed. </p>
-    <p class="t1">Instructions:<br>Your goal is to duplicate the provided text, <span>EXACTLY</span>, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p-->
-    <section class = "test-area1">
-        <div class="timings2">
-            <!--timer starts from here -->
-            <section id="clock7" class="label-text">
-                <div class="timer2">00:00:00</div>
-            </section>
-            <button id="reset7" class="label-text">RESET</button>
-        </div>
-
-        <div class="original_text1">
+    <section class = "test-area3">
+        <!--div class="original_text1">
             <p class="passage2">Enter your password</p>
-        </div>
+        </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area3"  onkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="The clock starts when you start typing."></textarea>
+            <textarea id="test-area3"  onkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
-</div>
+    </section></div>
 
 <hr>
 <div class="read_and_type_the_passage4">
-    <!--h3>Read and Type the Passage 4</h3>
-    <p class="t1">This is a typing test. This test is performed to calculate your typing speed. </p>
-    <p class="t1">Instructions:<br>Your goal is to duplicate the provided text, <span>EXACTLY</span>, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p-->
-    <section class = "test-area1">
-        <div class="timings2">
-            <!--timer starts from here -->
-            <section id="clock8" class="label-text">
-                <div class="timer2">00:00:00</div>
-            </section>
-            <button id="reset8" class="label-text">RESET</button>
-        </div>
-
-        <div class="original_text1">
+    <section class = "test-area4">
+        <!--div class="original_text1">
             <p class="passage2">Enter your password</p>
-        </div>
+        </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area4"  onkeyup="javascript:keypress('four')" name="textarea4" rows="7" cols="66" placeholder="The clock starts when you start typing."></textarea>
+            <textarea id="test-area4"  onkeyup="javascript:keypress('four')" name="textarea4" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
-</div>
+    </section></div>
 
 <hr>
 
+    <div class="read_and_type_the_passage3">
+        <section class = "test-area3">
+            <!--div class="original_text1">
+                <p class="passage2">Enter your password</p>
+            </div-->
 
+            <div class="test-wrapper1">
+                <textarea id="test-area4"  onkeyup="javascript:keypress('five')" name="textarea5" rows="7" cols="66" placeholder="Enter your password"></textarea>
+            </div><!-- .test-wrapper -->
+        </section></div>
+
+    <hr>
+    <div class="read_and_type_the_passage3">
+        <section class = "test-area3">
+            <!--div class="original_text1">
+                <p class="passage2">Enter your password</p>
+            </div-->
+
+            <div class="test-wrapper1">
+                <textarea id="test-area5"  onkeyup="javascript:keypress('six')" name="textarea6" rows="7" cols="66" placeholder="Enter your password"></textarea>
+            </div><!-- .test-wrapper -->
+        </section></div>
+
+    <hr>
 <!-- thank you! -->
 
 <div class="footer">
     <h3 class="thankyou">Thank You!</h3>
-    <p id="last">We thank you for patiently participating in the SignUp process. <br>Please click <span>'Final Submit'</span> button for your response to get recorded.</p>
+    <p id="last">We thank you for patiently participating in the  process. <br>Please click <span>'Final Submit'</span> button for your response to get recorded.</p>
     <div class="lastbutton">
         <!--?php $_SESSION['user'] = $username; ?-->
         <button type="submit" name="Submit"  id="final_submit">Final Submit</button>

@@ -9,7 +9,7 @@
 <body>
 <!-- heading -->
 <h2>Login Process </h2>
-<p id="instructions">Please fill all the fields as per the instructions. It is to <span>identify 'YOU' as 'YOU'!</span></p>
+<p id="instructions">Please fill below fields . It is to <span>identify 'YOU' as 'YOU'!</span></p>
 <hr><!-- heading -->
 
 <!-- box for email and password -->

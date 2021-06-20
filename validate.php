@@ -24,9 +24,12 @@
     $id2 = $_POST['textarea2'];
     $id3 = $_POST['textarea3'];
     $id4 = $_POST['textarea4'];
+    $id5 = $_POST['textarea5'];
+    $id6 = $_POST['textarea6'];
     $time_data = array();
 
-    if ($id1 == $id2 && $id3 == $id4 && $id1 == $id3 && $id1 != "") {
+    if ($id1 == $id2 && $id3 == $id4 && $id5==$id6 && $id1 == $id3 && $id1==$id5 &&  $id1 != "") {
+    //if($id1==$id2&&$id3==$id4&&$id5==$id6&&$id1==$id3&&$id1==$id5&&$id1!=""&&$table_password==$id1){
 
         $myfile = fopen("data.txt", "r");
         $str = fread($myfile, filesize("data.txt"));
@@ -38,7 +41,7 @@
                 $c = $c + 1;
         }
 
-        if ($c == strlen($table_password) * 4) {
+        if ($c == strlen($table_password) * 6) {
             $name = strstr($user, '@', true);
             $str = $name . "," . strlen($table_password) . "," . $str;
 
@@ -62,7 +65,8 @@
 
             print '<script>
 			alert("you are successfully entered the logistics");
-			window.location.assign("profile.php");</script>'; // redirects to register.php
+			window.location.assign("loginForm.php");
+            <!--window.location.assign("profile.php");--></script>';// redirects to register.php
             $done_update = mysqli_query($conn,"update users set done=1 WHERE email='$user'"); //Query the users table if there are matching rows equal to $username
         } else {
             $myfile = fopen("data.txt", "w") or die("Unable to open file!");
