@@ -59,7 +59,7 @@ max=diff_arr[1]
 #print(max)
 for(i in 1:length(diff_arr))
 {
-  #print(diff_arr[i])
+  #print(diff_arr[i])   >-150
   if(diff_arr[i]>-150 )
   {
     if(diff_arr[i]<150)
