@@ -45,7 +45,7 @@ if(isset($_POST['submit'])) {
     $exists = mysqli_num_rows($query); //Checks if username exists
     $table_users = "";
     $table_password = "";
-
+    $bool = True;
     if ($exists > 0) //IF there are no returning rows or no existing username
     {
         while ($row = mysqli_fetch_assoc($query)) //display all rows from query
@@ -53,39 +53,38 @@ if(isset($_POST['submit'])) {
             $table_users = $row['email']; // the first username row is passed on to $table_users, and so on until the query is finished
             $table_password = $row['password'];
             $done = $row['done'];
-            if ($password != $table_password) // checks if there are any matching fields
-            {
-                $bool = false;
-                session_start();
-                $_SESSION['user'] = $username;
-                $_SESSION['password'] = $password;
-                // sets bool to false
-                print '<script> 
-                                var error = document.querySelector("#login_error_message");   
-                                error.innerHTML = "Incorrect Password";
-                                error.style.color = "#00e676";
-                    </script>'; //Prompts the user
-            }// the first password row is passed on to $table_users, and so on until the query is finished
-
+            $bool = false;
+// the first password row is passed on to $table_users, and so on until the query is finished
 
         }
+
         //   Print $username.$password. $table_users.$table_password;
 
         if (($username == $table_users) && ($password == $table_password)) // checks if there are any matching fields
         {
             // Print 'Hello';
             session_start();
-            $_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
+            $_SESSION['user'] = $username;
+            $_SESSION['password'] = $password;//set the username in a session. This serves as a global variable
             print '<script>alert("logged in Successfully!!");</script>';
             print '<script>window.location.assign("login_keystroke.php");</script>';
         } else {
+            session_destroy();
             print '<script>console.log("logged inot Successfully!!");</script>';
             print '<script>
         var error = document.querySelector("#login_error_message");
-        error.innerHTML = "We do not know you!!!!!";
+        error.innerHTML = "Incorrect Password!!!";
         error.style.color = "#00e676";</script>'; //Prompts the user
             // redirects to login.php
         }
+
+    }
+    else
+    {
+        print '<script>
+        var error = document.querySelector("#login_error_message");
+        error.innerHTML = "We do not know you!!!!!";
+        error.style.color = "#00e676";</script>';
     }
 }
 ?>

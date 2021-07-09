@@ -1,4 +1,3 @@
-
 args <- commandArgs(TRUE)
 
 username<-args[1]
@@ -56,10 +55,12 @@ for(i in 1:length(arr))
   diff_arr[i]=med_arr[i]-arr[i]
 }
 max=diff_arr[1]
-#print(max)
-for(i in 1:length(diff_arr))
+#cat("max before for",max)
+for(i in 1:pwd_len)
 {
-  #print(diff_arr[i])   >-150
+  #print(diff_arr[i]>-150)
+  #print(diff_arr[i])
+
   if(diff_arr[i]>-150 )
   {
     if(diff_arr[i]<150)

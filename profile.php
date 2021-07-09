@@ -1,5 +1,6 @@
 
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <?php
 session_start(); //starts the session
 if($_SESSION['user']){ //checks if user is logged in
@@ -14,20 +15,14 @@ if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])
     $resm=$_SESSION['strm'];
 }
 ?>
-<body>
-<a href="logout.php">LOGOUT</a>
-<div id="euc" class="tab-pane fade ">
-    <h3>Euclidian</h3>
-    <?php Print "$res"; ?>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Login_identification</title>
+    <link rel="stylesheet" href="identification_login.css">
 
-</div>
-<div id="man" class="tab-pane fade">
-    <h3>Manhattan model</h3>
-    <?php Print "$resn" ?>
-</div>
-<div id="med" class="tab-pane fade">
-    <h3>Manhattan model using median </h3>
-<?php Print "$resm" ?>
+</head>
+
+<body>
 
     <?php
     $count=0;
@@ -40,8 +35,7 @@ if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])
             $count=$count+1;
 
         Print "The input has passed ".$count." out of three predictive algorithms";
-        //if(strpos($res, "yes")!==false ||( strpos($resn, "yes")!==false &&strpos($resm, "yes")!==false))
-        if ($count>=1)
+        if(strpos($res, "yes")!==false ||( strpos($resn, "yes")!==false &&strpos($resm, "yes")!==false))
         {
             //Print "<br>It has passed the ensemble criteria!!Yippe!!";
             Print '<script>	window.location.assign("identification_login.php");</script>';
@@ -50,7 +44,7 @@ if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])
         else
         {
             Print '<script>alert("It has failed the ensemble criteria! Sorry")</script>';
-            Print '<script>	window.location.assign("loginForm.php");</script>';
+            Print '<script>	window.location.assign("failed.php");</script>';
 
 
         }
@@ -58,8 +52,9 @@ if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])
     }
     else{
         Print "Enter your keystroke";
+        Print '<script>	window.location.assign("login_keystroke.php");</script>';
     }
     ?>
-</div>
+
 </body>
 </html>

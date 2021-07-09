@@ -40,7 +40,7 @@ $user = $_SESSION['user']; //assigns user value
         </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area1"  onkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="Enter your password"></textarea>
+            <textarea id="test-area1"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
     </section></div>
 
@@ -55,7 +55,7 @@ $user = $_SESSION['user']; //assigns user value
         </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area2" onkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="Enter your password"></textarea>
+            <textarea id="test-area2" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
 
     </section></div>
@@ -69,7 +69,7 @@ $user = $_SESSION['user']; //assigns user value
         </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area3"  onkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="Enter your password"></textarea>
+            <textarea id="test-area3"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
     </section></div>
 
@@ -81,7 +81,7 @@ $user = $_SESSION['user']; //assigns user value
         </div-->
 
         <div class="test-wrapper1">
-            <textarea id="test-area4"  onkeyup="javascript:keypress('four')" name="textarea4" rows="7" cols="66" placeholder="Enter your password"></textarea>
+            <textarea id="test-area4"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('four')" name="textarea4" rows="7" cols="66" placeholder="Enter your password"></textarea>
         </div><!-- .test-wrapper -->
     </section></div>
 
@@ -94,7 +94,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area4"  onkeyup="javascript:keypress('five')" name="textarea5" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area4"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('five')" name="textarea5" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -106,7 +106,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area5"  onkeyup="javascript:keypress('six')" name="textarea6" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area4" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off onkeyup="javascript:keypress('six')" onkeydown="javascript:crtl()" name="textarea6" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -139,6 +139,7 @@ $user = $_SESSION['user']; //assigns user value
         //var x=document.getElementById(d);
         var evt = event || e; // for trans-browser compatibility
         var charCode = evt.which || evt.keyCode;
+
         d=new Date();
         curr=d.getTime();
         if(charCode==8)
@@ -147,7 +148,11 @@ $user = $_SESSION['user']; //assigns user value
             window.location.href="speedCheck.php";
 
         }
-        else if(charCode!=9)
+ //       else if (charCode==17 || charCode==16)
+  //      {
+  //          return ;
+ //       }
+        else if(charCode!=9 )
         {
             x+=" "+curr;
             console.log(x);
@@ -155,6 +160,14 @@ $user = $_SESSION['user']; //assigns user value
             xmlhttp.open("GET", "print.php?r=" + curr, true);
             xmlhttp.send();
         }
+    }
+    function crtl()
+    {
+        var charCode = evt.which || evt.keyCode;
+        if (charCode==17 || charCode==16)
+        {
+            alert('do not enter special characters');
+            window.location.href="speedCheck.php";        }
     }
 </script>
 </body>

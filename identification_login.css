@@ -47,3 +47,18 @@ hr{
     font-weight:bold;
     margin-top: 20px;
 }
+
+#logout {
+    height:60px;
+    margin-left:60px;
+    width:280px;
+    /* border:none; */
+    border-width:thick;
+    border-color:#004d40;
+    background-color: #00bcd4;
+    color:#004d40;
+    font-size: 20px;
+    font-weight:bold;
+    margin-top: 20px;
+    align :left ;
+}

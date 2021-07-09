@@ -29,12 +29,15 @@ while(1)
   {
     cur_pwd_timing[i]=cur_pwd_timing[i]-temp_array[i-1]
     total_timing[i]=total_timing[i]+cur_pwd_timing[i]
+    #print(total_timing[i])
   }
   cur_pwd_timing[1]=0
   num_pwd_stored=num_pwd_stored+1
   pwd_timing=rbind(pwd_timing,cur_pwd_timing)
 }
 avg_pwd_timing=total_timing/num_pwd_stored
+#print(length(avg_pwd_timing))
+#print(avg_pwd_timing)
 
 
 #Euclidean distances
@@ -60,8 +63,6 @@ for(i in 1:num_pwd_stored)
   anomaly[i]=cur_euclidean_dist
 }
 threshold=mean(anomaly)
-
-
 
 arr=arr[2:length(arr)]
 t_arr=arr

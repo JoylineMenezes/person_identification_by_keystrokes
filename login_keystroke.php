@@ -39,7 +39,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area1"  onkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area1"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off onkeyup="javascript:keypress('one')" name="textarea1" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -54,7 +54,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area2" onkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area2" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('two')" name="textarea2" rows="9" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
 
         </section></div>
@@ -68,7 +68,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area3"  onkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area3"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offonkeyup="javascript:keypress('three')" name="textarea3" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -80,7 +80,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area4"  onkeyup="javascript:keypress('four')" name="textarea4" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area4"  onkeyup="javascript:keypress('four')" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offname="textarea4" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -92,7 +92,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area4"  onkeyup="javascript:keypress('five')" name="textarea5" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area4"  onkeyup="javascript:keypress('five')" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=offname="textarea5" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
@@ -104,7 +104,7 @@ $user = $_SESSION['user']; //assigns user value
             </div-->
 
             <div class="test-wrapper1">
-                <textarea id="test-area5"  onkeyup="javascript:keypress('six')" name="textarea6" rows="7" cols="66" placeholder="Enter your password"></textarea>
+                <textarea id="test-area4"  onkeyup="javascript:keypress('six')" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off name="textarea6" rows="7" cols="66" placeholder="Enter your password"></textarea>
             </div><!-- .test-wrapper -->
         </section></div>
 
